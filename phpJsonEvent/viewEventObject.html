@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Untitled Document</title>
+    <script>
+
+        function getEventObject() {
+
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    console.log(this.responseText);
+                    let myObj = JSON.parse(this.responseText);
+                    document.getElementById("displayEvent").innerHTML = myObj.event_name;
+                    document.getElementById("displayDesc").innerHTML = myObj.event_description;
+                    document.getElementById("displayPresenter").innerHTML = myObj.event_presenter;
+                    document.getElementById("displayDate").innerHTML = myObj.event_date;
+                    document.getElementById("displayTime").innerHTML = myObj.event_time;
+                }
+            };
+            xmlhttp.open("GET", "deliverEventObject.php", true);
+            xmlhttp.send();
+
+        }
+
+
+
+    </script>
+
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            line-height: 1.75em;
+            text-align: center;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        .eventBlock {
+            width: 30%;
+            margin: 4em 1em;
+            padding: 1em;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 3px #efefef;
+        }
+
+        p {
+            margin: 0.5em;
+        }
+
+        #eventTitle {
+            font-size: 1.2em;
+        }
+
+        #eventTitle,
+        #eventDesc {
+            font-weight: bold;
+        }
+
+        #eventDesc {
+            margin-bottom: 2em;
+        }
+
+        .row2 {
+            align-self: flex-end;
+        }
+    </style>
+
+</head>
+
+<body onLoad=getEventObject()>
+    <div class="container">=
+
+        <div class="eventBlock">
+            <h2 id="displayEvent"></h2>
+            <p id="displayDesc"></p>
+            <p id="displayPresenter"></p>
+            <p id="displayDate"></p>
+            <p id="displayTime"></p>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
