@@ -1,0 +1,85 @@
+
+.adminSection {
+    position: relative;
+    text-align: center;
+    z-index: 10;
+    background-color: #eae2b7;
+    padding: 5em 0;
+    width:50%;
+    margin-bottom: 15em;
+    box-shadow: 0 0 10px 0 rgba(0, 48, 73, 0.35);
+    border-radius: 10px;
+}
+
+h2, h3 {
+    color: #003049;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form p {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+form label {
+    width: 25%;
+    margin: 1em 0;
+    text-align: left;
+}
+
+form input[type="text"],
+form input[type="password"]
+{
+    width: 75%;
+    padding: 0.5em;
+    margin: 1em 0;
+    border: 1px solid gray;
+    box-shadow: 0 0 0.3em 0 rgba(0, 0, 0, 0.15);
+}
+
+.adminSection button{
+    width: 200px;
+}
+
+@media(max-width:967px) {
+    .adminSection {
+        width: 75%;
+    }
+}
+
+@media (max-width:800px) {
+    .adminSection {
+        width:80%;
+    }
+}
+
+@media(max-width: 585px) {
+    form p {
+        width: 75%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    form input[type="text"],
+form input[type="password"] {
+    width: 100%;
+}
+}
+
+@media (max-width:400px) {
+    h2 {
+        font-size: 1.5em;
+    }
+    h3 {
+        font-size: 1.25em;
+    }
+    .adminSection {
+        width:90%;
+    }
+}

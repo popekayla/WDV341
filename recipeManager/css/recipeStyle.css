@@ -1,0 +1,85 @@
+.mainSection {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #eae2b7;
+    border-radius: 10px;
+    padding: 35px;
+    box-shadow: 0 0 10px 0 rgba(0, 48, 73, 0.35);
+    margin-top: -7em;
+}
+
+header h1 {
+    padding: 2em 0;
+}
+
+
+.mainSection img{
+    width: 400px;
+    margin-right: 2em;
+}
+
+.recipeInfo p{
+    margin: 1em 0;
+}
+
+strong {
+    text-transform: uppercase;
+    color: #003049;
+}
+
+.otherInfo {
+    width: 100%;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+ol, ul {
+    list-style-position: inside;
+    margin-bottom: 1em;
+}
+
+li{
+    margin-bottom: 0.5em;
+}
+
+p {
+    margin: 2em 0;
+}
+
+input {
+    width: 10%;
+    padding: 0.2em;
+}
+
+@media(max-width:1133px) {
+    .mainSection img {
+        width: 45%;
+    }
+}
+
+@media(max-width:846px){
+    .mainSection img {
+       width: 100%;
+       margin-bottom: 2em;
+    }
+
+    .mainSection {
+        padding: 15px;
+    }
+
+    .otherInfo {
+        margin-left: 0;
+    }
+}
+
+@media(max-width:450px) {
+    .mainSection {
+        width: 85%;
+    }
+
+    input {
+        width: 20%;
+    }
+}
